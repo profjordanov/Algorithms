@@ -1,0 +1,38 @@
+Let's call an array sorted if its elements are arranged in a non-decreasing order. Given two sorted arrays, merge them.
+
+Example
+
+For a = [1, 2, 2, 4] and b = [2, 3, 4], the output should be
+mergeArrays(a, b) = [1, 2, 2, 2, 3, 4, 4].
+
+#code.java
+
+  int[] mergeArrays(int[] a, int[] b) {
+
+  int[] result = new int[a.length + b.length];
+  int i, j;
+  int k = 0;
+
+  for (i = 0, j = 0; i < a.length || j < b.length; ) {
+    if (a[i] < b[j]) {
+      result[k++] = a[i];
+      i++;
+    }
+    else {
+      result[k++] = b[j];
+      j++;
+    }
+  }
+
+  while (i < a.length) {
+    result[k++] = a[i];
+    i++;
+  }
+
+  while (j < b.length) {
+    result[k++] = b[j];
+    j++;
+  }
+
+  return result;
+}
