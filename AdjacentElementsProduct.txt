@@ -1,0 +1,17 @@
+Given an array of integers, find the pair of adjacent elements that has the largest product and return that product.
+
+Example
+
+For inputArray = [3, 6, -2, -5, 7, 3], the output should be
+adjacentElementsProduct(inputArray) = 21.
+
+7 and 3 produce the largest product.
+
+  code.cs
+      int adjacentElementsProduct(int[] a) {
+      int max = -2500;
+      for (int i=1; i< a.Length; ) {
+          max = Math.Max(max, a[i-1] * a[i++]);
+      }
+        return max;
+      }
