@@ -1,0 +1,28 @@
+You are given an n x n 2D matrix that represents an image. Rotate the image by 90 degrees (clockwise).
+
+Example
+
+For
+
+a = [[1, 2, 3],
+     [4, 5, 6],
+     [7, 8, 9]]
+
+code.cs
+
+    int[][] rotateImage(int[][] a) {
+    int[][] matrix = a;
+    int length = matrix.Length - 1;
+    int j = 0;
+    while(j < matrix.Length/2){
+        for(int i=j; i<length-j;i++){
+            int temp = matrix[j][i];
+            matrix[j][i] = matrix[length-i][j];
+            matrix[length-i][j] = matrix[length - j][length - i];
+            matrix[length - j][length - i] = matrix[i][length - j];
+            matrix[i][length - j] = temp;
+        }
+        j++;
+    }
+    return matrix;
+}
