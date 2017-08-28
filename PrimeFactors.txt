@@ -1,0 +1,20 @@
+Write an algorithm that constructs an array of non unique prime factors of a number n.
+
+Example
+
+For n = 100, the output should be
+primeFactors(n) = [2, 2, 5, 5].
+_______________________________
+int[] primeFactors(int n) {
+    List<int> primefactors = new List<int>();
+        long copyOfInput = n;
+
+        for (int i = 2; i <= copyOfInput; i++) {
+            if (copyOfInput % i == 0) {
+                primefactors.Add(i); 
+                copyOfInput /= i;
+                i--;
+            }
+        }
+        return primefactors.ToArray();
+}
