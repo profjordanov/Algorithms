@@ -1,17 +1,14 @@
 using System;
 using System.Collections.Generic;
-
-namespace ConsoleApplication4
-{
-    class Program
-    {
-        static void Main(string[] args)
+using System.IO;
+class Solution {
+    static void Main(string[] args)
         {
             var input = Console.ReadLine().Split();
             int a = int.Parse(input[0]);
             int b = int.Parse(input[1]);
             int c = int.Parse(input[2]);
-           int[] array = new int[6];
+            int[] array = new int[6];
 
             array[0] = a + b;
             array[1] = a * b;
@@ -20,25 +17,25 @@ namespace ConsoleApplication4
             array[4] = a * a;
             array[5] = b * b;
 
+            var x = Closest(c, array);
+            Console.WriteLine(x);
 
-            for (int i = 1; i < array.Length - 1; i++)
-            {
-                if (Math.Abs(array[i - 1] - c) < Math.Abs(array[i] - c))
-                {
-                    Console.WriteLine(array[i - 1]);
-                }
-                else
-                {
-                    Console.WriteLine(array[i]);
-                }
-            }
-
-            //var closest = array.Where(numbers => numbers > number).First();
-
-            //int closest = array.OrderBy(item => Math.Abs(number - item)).First();
-
-            //int closest = array.Aggregate((x, y) => Math.Abs(x - number) < Math.Abs(y - number) ? x : y);
 
         }
-    }
+
+        private static int Closest(int num, int[] arr)
+        {
+            var curr = arr[0];
+            var diff = Math.Abs(num - curr);
+            for (var val = 0; val < arr.Length; val++)
+            {
+                var newdiff = Math.Abs(num - arr[val]);
+                if (newdiff <= diff)
+                {
+                    diff = newdiff;
+                    curr = arr[val];
+                }
+            }
+            return curr;
+        }
 }
