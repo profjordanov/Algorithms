@@ -1,0 +1,10 @@
+C:\Users\yoryordanov\Documents\GitHub\Algorithms\01-Recursion - Lab\Recursive Factorial\bin\Debug\netcoreapp2.1\Recursive Factorial.deps.json
+C:\Users\yoryordanov\Documents\GitHub\Algorithms\01-Recursion - Lab\Recursive Factorial\bin\Debug\netcoreapp2.1\Recursive Factorial.runtimeconfig.json
+C:\Users\yoryordanov\Documents\GitHub\Algorithms\01-Recursion - Lab\Recursive Factorial\bin\Debug\netcoreapp2.1\Recursive Factorial.runtimeconfig.dev.json
+C:\Users\yoryordanov\Documents\GitHub\Algorithms\01-Recursion - Lab\Recursive Factorial\bin\Debug\netcoreapp2.1\Recursive Factorial.dll
+C:\Users\yoryordanov\Documents\GitHub\Algorithms\01-Recursion - Lab\Recursive Factorial\bin\Debug\netcoreapp2.1\Recursive Factorial.pdb
+C:\Users\yoryordanov\Documents\GitHub\Algorithms\01-Recursion - Lab\Recursive Factorial\obj\Debug\netcoreapp2.1\Recursive Factorial.csproj.CoreCompileInputs.cache
+C:\Users\yoryordanov\Documents\GitHub\Algorithms\01-Recursion - Lab\Recursive Factorial\obj\Debug\netcoreapp2.1\Recursive Factorial.AssemblyInfoInputs.cache
+C:\Users\yoryordanov\Documents\GitHub\Algorithms\01-Recursion - Lab\Recursive Factorial\obj\Debug\netcoreapp2.1\Recursive Factorial.AssemblyInfo.cs
+C:\Users\yoryordanov\Documents\GitHub\Algorithms\01-Recursion - Lab\Recursive Factorial\obj\Debug\netcoreapp2.1\Recursive Factorial.dll
+C:\Users\yoryordanov\Documents\GitHub\Algorithms\01-Recursion - Lab\Recursive Factorial\obj\Debug\netcoreapp2.1\Recursive Factorial.pdb
