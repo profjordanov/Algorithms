@@ -7,11 +7,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Reverse Array", "Reverse Ar
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Recursive Factorial", "Recursive Factorial\Recursive Factorial.csproj", "{A20E2400-AD98-4F8A-9E81-A34C2F273553}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Recursive Drawing", "Recursive Drawing\Recursive Drawing.csproj", "{A3A226A0-2C4C-4CC1-A5E1-45733E324AEF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Recursive Drawing", "Recursive Drawing\Recursive Drawing.csproj", "{A3A226A0-2C4C-4CC1-A5E1-45733E324AEF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Generating01Vectors", "Generating01Vectors\Generating01Vectors.csproj", "{79A7EF1E-4734-431C-AB4F-0B775FFE7AD1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Generating01Vectors", "Generating01Vectors\Generating01Vectors.csproj", "{79A7EF1E-4734-431C-AB4F-0B775FFE7AD1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeneratingCombinations", "GeneratingCombinations\GeneratingCombinations.csproj", "{0B0393A7-9F82-44A7-A73F-0CAB012187E2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GeneratingCombinations", "GeneratingCombinations\GeneratingCombinations.csproj", "{0B0393A7-9F82-44A7-A73F-0CAB012187E2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Find All Paths in a Labyrinth", "Find All Paths in a Labyrinth\Find All Paths in a Labyrinth.csproj", "{7C393C00-6DFB-4CDB-9AB8-A8445E9D3482}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{0B0393A7-9F82-44A7-A73F-0CAB012187E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0B0393A7-9F82-44A7-A73F-0CAB012187E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0B0393A7-9F82-44A7-A73F-0CAB012187E2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7C393C00-6DFB-4CDB-9AB8-A8445E9D3482}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7C393C00-6DFB-4CDB-9AB8-A8445E9D3482}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7C393C00-6DFB-4CDB-9AB8-A8445E9D3482}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7C393C00-6DFB-4CDB-9AB8-A8445E9D3482}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
