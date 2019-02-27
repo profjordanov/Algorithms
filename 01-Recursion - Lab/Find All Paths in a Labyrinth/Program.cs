@@ -9,110 +9,92 @@ namespace Find_All_Paths_in_a_Labyrinth
 	/// </summary>
 	internal class Program
 	{
-		static char[,] matrix;
-		static SortedSet<Area> areas = new SortedSet<Area>();
+		static char[,] labyrinth;
+		static List<char> path = new List<char>();
 
 		static void Main(string[] args)
 		{
-			ReadMatrix();
-			Cell unmarkedCell;
-
-			while ((unmarkedCell = FindCell()) != null)
-			{
-				Area current = new Area {Row = unmarkedCell.Row, Col = unmarkedCell.Col, Size = 0};
-				int size = TraverseArea(current.Row, current.Col);
-				current.Size = size;
-				areas.Add(current);
-			}
-
-			Console.WriteLine($"Total areas found: {areas.Count}");
-			int counter = 1;
-			foreach (var area in areas)
-			{
-				Console.WriteLine($"Area #{counter++} at ({area.Row}, {area.Col}), size: {area.Size}");
-			}
+			labyrinth = ReadLabyrinth();
+			FindPaths(0, 0, 'S');
 		}
 
-		private static int TraverseArea(int row, int col)
+		private static void FindPaths(int row, int col, char direction)
 		{
-			if (row < 0 || row >= matrix.GetLength(0) || col < 0 || col >= matrix.GetLength(1) ||
-			    matrix[row, col] == '*' || matrix[row, col] == 'v')
+			if(!IsInBounds(row, col))
 			{
-				return 0;
+				return;
 			}
-			else
+
+			path.Add(direction);
+
+			if(IsExit(row, col))
 			{
-				matrix[row, col] = 'v';
-				return 1 + TraverseArea(row - 1, col) + TraverseArea(row + 1, col) + TraverseArea(row, col - 1) +
-				       TraverseArea(row, col + 1);
+				PrintPath();
 			}
+			else if(IsFree(row, col))
+			{
+				Mark(row, col);
+				FindPaths(row, col + 1, 'R');
+				FindPaths(row + 1, col, 'D');
+				FindPaths(row, col - 1, 'L');
+				FindPaths(row - 1, col, 'U');
+				Unmark(row, col);
+			}
+
+			path.RemoveAt(path.Count - 1);
 		}
 
-		private static Cell FindCell()
+		private static void Unmark(int row, int col)
 		{
-			for (int i = 0; i < matrix.GetLength(0); i++)
-			{
-				for (int j = 0; j < matrix.GetLength(1); j++)
-				{
-					if (matrix[i, j] != '*' && matrix[i, j] != 'v')
-					{
-						return new Cell {Row = i, Col = j};
-					}
-				}
-			}
-
-			return null;
+			labyrinth[ row, col ] = '-';
 		}
 
-		private static void ReadMatrix()
+		private static void Mark(int row, int col)
+		{
+			labyrinth[ row, col ] = 'v';
+		}
+
+		private static bool IsFree(int row, int col)
+		{
+			return labyrinth[ row, col ] == '-';
+		}
+
+		private static void PrintPath()
+		{
+			Console.WriteLine(String.Join(String.Empty, path.Skip(1)));
+		}
+
+		private static bool IsExit(int row, int col)
+		{
+			return labyrinth[ row, col ] == 'e';
+		}
+
+		private static bool IsInBounds(int row, int col)
+		{
+			bool isRowExisting = row >= 0 && row < labyrinth.GetLength(0);
+			bool isColExisting = col >= 0 && col < labyrinth.GetLength(1);
+
+			return isRowExisting && isColExisting;
+		}
+
+		private static char[,] ReadLabyrinth()
 		{
 			int rows = int.Parse(Console.ReadLine());
 			int cols = int.Parse(Console.ReadLine());
 
-			matrix = new char[rows, cols];
+			char[,] labyrinth = new char[ rows, cols ];
 
-			for (int i = 0; i < matrix.GetLength(0); i++)
+			for(int i = 0; i < labyrinth.GetLength(0); i++)
 			{
 				string line = Console.ReadLine();
 
-				for (int j = 0; j < matrix.GetLength(1); j++)
+				for(int j = 0; j < labyrinth.GetLength(1); j++)
 				{
-					matrix[i, j] = line[j];
+					labyrinth[ i, j ] = line[ j ];
 				}
 			}
-		}
 
-		class Area : IComparable
-		{
-			public int Row { get; set; }
-
-			public int Col { get; set; }
-
-			public int Size { get; set; }
-
-			public int CompareTo(object otherr)
-			{
-				Area other = (Area) otherr;
-
-				if (this.Size != other.Size)
-				{
-					return other.Size.CompareTo(this.Size);
-				}
-
-				if (this.Row != other.Row)
-				{
-					return this.Row.CompareTo(other.Row);
-				}
-
-				return this.Col.CompareTo(other.Col);
-			}
-		}
-
-		class Cell
-		{
-			public int Row { get; set; }
-
-			public int Col { get; set; }
+			return labyrinth;
 		}
 	}
 }
