@@ -1,0 +1,11 @@
+C:\Users\yoryordanov\Documents\GitHub\Algorithms\02-Sorting and Searching - Exercises\Sorting\Sorting\bin\Debug\netcoreapp2.1\Sorting.deps.json
+C:\Users\yoryordanov\Documents\GitHub\Algorithms\02-Sorting and Searching - Exercises\Sorting\Sorting\bin\Debug\netcoreapp2.1\Sorting.runtimeconfig.json
+C:\Users\yoryordanov\Documents\GitHub\Algorithms\02-Sorting and Searching - Exercises\Sorting\Sorting\bin\Debug\netcoreapp2.1\Sorting.runtimeconfig.dev.json
+C:\Users\yoryordanov\Documents\GitHub\Algorithms\02-Sorting and Searching - Exercises\Sorting\Sorting\bin\Debug\netcoreapp2.1\Sorting.dll
+C:\Users\yoryordanov\Documents\GitHub\Algorithms\02-Sorting and Searching - Exercises\Sorting\Sorting\bin\Debug\netcoreapp2.1\Sorting.pdb
+C:\Users\yoryordanov\Documents\GitHub\Algorithms\02-Sorting and Searching - Exercises\Sorting\Sorting\obj\Debug\netcoreapp2.1\Sorting.csprojAssemblyReference.cache
+C:\Users\yoryordanov\Documents\GitHub\Algorithms\02-Sorting and Searching - Exercises\Sorting\Sorting\obj\Debug\netcoreapp2.1\Sorting.csproj.CoreCompileInputs.cache
+C:\Users\yoryordanov\Documents\GitHub\Algorithms\02-Sorting and Searching - Exercises\Sorting\Sorting\obj\Debug\netcoreapp2.1\Sorting.AssemblyInfoInputs.cache
+C:\Users\yoryordanov\Documents\GitHub\Algorithms\02-Sorting and Searching - Exercises\Sorting\Sorting\obj\Debug\netcoreapp2.1\Sorting.AssemblyInfo.cs
+C:\Users\yoryordanov\Documents\GitHub\Algorithms\02-Sorting and Searching - Exercises\Sorting\Sorting\obj\Debug\netcoreapp2.1\Sorting.dll
+C:\Users\yoryordanov\Documents\GitHub\Algorithms\02-Sorting and Searching - Exercises\Sorting\Sorting\obj\Debug\netcoreapp2.1\Sorting.pdb
