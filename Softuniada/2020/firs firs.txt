@@ -1,0 +1,16 @@
+            var zapl = decimal.Parse(Console.ReadLine());
+            var razh = decimal.Parse(Console.ReadLine());
+            var narastSum = decimal.Parse(Console.ReadLine());
+            var avto = decimal.Parse(Console.ReadLine());
+            var mesec = decimal.Parse(Console.ReadLine());
+
+            var totalSum = zapl * mesec;
+            var rashSum = razh * mesec;
+
+            for (int i = 1; i < mesec; i++)
+            {
+                totalSum = totalSum + (narastSum * i);
+            }
+
+            var result = totalSum - rashSum;
+            Console.WriteLine(result >= avto ? "Have a nice ride!" : "Work harder!");

@@ -1,0 +1,28 @@
+using System;
+
+namespace ConsoleApp2
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            var zapl = decimal.Parse(Console.ReadLine());
+            var razh = decimal.Parse(Console.ReadLine());
+            var narastSum = decimal.Parse(Console.ReadLine());
+            var avto = decimal.Parse(Console.ReadLine());
+            var mesec = decimal.Parse(Console.ReadLine());
+
+            var totalSum = zapl;
+            var rashSum = razh;
+
+            for (int i = 1; i < mesec; i++)
+            {
+                totalSum = totalSum + (zapl + (narastSum * i));
+                rashSum = rashSum + razh;
+            }
+
+            var result = totalSum - rashSum;
+            Console.WriteLine(result >= avto ? "Have a nice ride!" : "Work harder!");
+        }
+    }
+}
